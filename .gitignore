@@ -1,6 +1,6 @@
 db.sqlite3
 gymapp/__pycache__/*
-apps/excercises/__pycache__/*
+/apps/excercises/__pycache__/*
 /apps/exercises/migrations/*
 /apps/food_plan/__pycache__/*
 /apps/food_plan/migrations/*
@@ -12,3 +12,5 @@ apps/excercises/__pycache__/*
 /apps/student/migrations/*
 /apps/training/__pycache__/*
 /apps/training/migrations/*
+/apps/user/__pycache__/*
+/apps/user/migrations/*
