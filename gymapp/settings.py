@@ -33,7 +33,7 @@ DEBUG = config('DEBUG', default=False, cast=bool)
 
 ALLOWED_HOSTS = []
 
-
+list
 # Application definition
 
 INSTALLED_APPS = [
