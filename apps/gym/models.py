@@ -2,13 +2,13 @@ from django.db import models
 
 # Create your models here.
 
-#from student.models import Student
-#from instructor.models import Instructor
+from student.models import Student
+from instructor.models import Instructor
 class Gym(models.Model):
     cnpj = models.CharField('cnpj', max_length=50)
-    #student = models.ForeignKey(Student, on_delete=models.CASCADE)
-    #instructor = models.ForeignKey(Instructor, on_delete=models.CASCADE)
-    #user = models.ForeignKey(User, on_delete=models.CASCADE) 
+    student = models.ForeignKey(Student, on_delete=models.CASCADE)
+    instructor = models.ForeignKey(Instructor, on_delete=models.CASCADE)
+    user = models.ForeignKey(User, on_delete=models.CASCADE) 
     
     class Meta:
         verbose_name = 'Gym'
