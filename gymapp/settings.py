@@ -33,7 +33,7 @@ DEBUG = config('DEBUG', default=False, cast=bool)
 
 ALLOWED_HOSTS = []
 
-
+list
 # Application definition
 
 INSTALLED_APPS = [
@@ -44,6 +44,14 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
+    'exercises.apps.ExercisesConfig',
+    'plan_food.apps.Plan_foodConfig',
+    'gym.apps.GymConfig',
+    'student.apps.StudentConfig',
+    'instructor.apps.InstructorConfig',
+    'training.apps.TrainingConfig',
+
+
 ]
 
 MIDDLEWARE = [
