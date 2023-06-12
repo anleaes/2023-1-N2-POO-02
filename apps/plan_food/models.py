@@ -1,7 +1,8 @@
 from django.db import models
+from plan_food.models import Plan_food
 
 # Create your models here.
-class Food_Plan(models.Model):
+class Plan_food(models.Model):
     alimento = models.CharField('alimento', max_length=200)
     quantidade = models.TextField('quantidade', max_length=15)
     
