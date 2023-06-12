@@ -49,6 +49,8 @@ INSTALLED_APPS = [
     'gym.apps.GymConfig',
     'student.apps.StudentConfig',
     'instructor.apps.InstructorConfig',
+    'training.apps.TrainingConfig',
+
 
 ]
 
