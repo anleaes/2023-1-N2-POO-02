@@ -1,0 +1,65 @@
+
+@startuml
+
+title: Diagrama Academia
+
+class User {
+    - nome: String
+    - endereco: String
+    - telefone: String
+    - email: String
+    - senha: String
+    - tipoUsuario: tipo
+    + construtor(nome, edereco, telefone, email, senha)      
+    + cadastrarUsuario(nome, edereco, telefone, email, senha)
+    + buscarUsuario(nome)                 
+    
+}
+
+class Gym{
+    - cnpj: String
+    - user: User
+    + construtor(cnpj)
+    + cadastrarcnpj(cnpj)
+    + adicionarAluno(student: Student)
+    + adicionarInstrutor(instructor: Instructor)
+
+}
+
+
+class Training{
+    - exercises: Exercises
+    + construtor(tipoExercicio, peso, repeticoes)
+    + cadastrarTreino(tipoExercicio, peso, repeticoes)
+}
+
+class Exercises{
+    - tipoExercicio: String
+    - peso: int
+    - repeticoes: int
+    + construtor(tipoExercicio, peso, repeticoes)
+    + cadastrarTreino(tipoExercicio, peso, repeticoes)
+}
+
+class Food_Plan{
+    - alimento: String
+    - quantidade: int
+    + construtor(alimento, quantidade)
+    + cadastrarPlanoAlimentar(alimento, quantidade)
+}
+
+
+
+
+
+User --* Training
+Training *-- Exercises
+Gym *-- User
+Food_Plan --* User
+
+
+
+
+
+
+@enduml
