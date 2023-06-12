@@ -1,5 +1,4 @@
 from django.db import models
-from plan_food.models import Plan_food
 
 # Create your models here.
 class Plan_food(models.Model):
