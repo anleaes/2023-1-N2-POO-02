@@ -20,4 +20,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('exercises/', include('exercises.urls', namespace='exercises')),
     path('plan_food/', include('plan_food.urls', namespace='plan_food')),
+    path('gym', include('gym.urls', namespace='gym')),
 ]
