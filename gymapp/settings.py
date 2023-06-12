@@ -48,6 +48,8 @@ INSTALLED_APPS = [
     'plan_food.apps.Plan_foodConfig',
     'gym.apps.GymConfig',
     'student.apps.StudentConfig',
+    'instructor.apps.InstructorConfig',
+
 ]
 
 MIDDLEWARE = [
