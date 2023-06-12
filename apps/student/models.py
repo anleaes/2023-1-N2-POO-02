@@ -11,3 +11,6 @@ class Student(models.Model):
    # training = models.ForeignKey(Training, on_delete=models.CASCADE)
     food_plan = models.ForeignKey(Food_Plan, on_delete=models.CASCADE)
     user = models.ForeignKey(User, on_delete=models.CASCADE) 
+
+    def __str__(self):
+        return self.objetivo
