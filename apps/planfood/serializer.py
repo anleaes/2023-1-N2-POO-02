@@ -1,9 +1,9 @@
-from .models import Plan_food
+from .models import PlanFood
 from rest_framework import serializers
 
 class CategorySerializer(serializers.ModelSerializer):
     class Meta:
-        model = Plan_food
+        model = PlanFood
         fields = '__all__'
         
         # Para chamar todos os atributos:

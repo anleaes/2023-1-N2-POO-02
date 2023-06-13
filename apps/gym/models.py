@@ -5,6 +5,8 @@ from django.db import models
 from student.models import Student
 from instructor.models import Instructor
 class Gym(models.Model):
+    nome = models.CharField('nome', max_length=50)
+    adress = models.CharField('adress', max_length=50)
     cnpj = models.CharField('cnpj', max_length=50)
     student = models.ForeignKey(Student, on_delete=models.CASCADE)
     instructor = models.ForeignKey(Instructor, on_delete=models.CASCADE)

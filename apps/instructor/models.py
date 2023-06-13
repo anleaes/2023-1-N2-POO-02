@@ -5,7 +5,7 @@ from django.db import models
 from django.contrib.auth.models import User
 
 class Instructor(models.Model):
-    especialidade = models.CharField('Nome', max_length=50)
+    especialidade = models.CharField('Especialidade', max_length=50)
     user = models.ForeignKey(User, on_delete=models.CASCADE) 
     
     def __str__(self):

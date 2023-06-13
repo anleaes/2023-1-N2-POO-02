@@ -17,8 +17,9 @@ class User {
 }
 
 class Gym{
+    - name : String
+    - addres : String
     - cnpj: String
-    - user: User
     + construtor(cnpj)
     + cadastrarcnpj(cnpj)
     + adicionarAluno(student: Student)
@@ -29,6 +30,12 @@ class Gym{
 
 class Training{
     - exercises: Exercises
+    - data: date
+    - hora: String
+    - observacoes: String
+    - gym : Gym
+    - user : User
+
     + construtor(tipoExercicio, peso, repeticoes)
     + cadastrarTreino(tipoExercicio, peso, repeticoes)
 }
@@ -41,9 +48,10 @@ class Exercises{
     + cadastrarTreino(tipoExercicio, peso, repeticoes)
 }
 
-class Food_Plan{
+class FoodPlan{
     - alimento: String
     - quantidade: int
+    - user
     + construtor(alimento, quantidade)
     + cadastrarPlanoAlimentar(alimento, quantidade)
 }
@@ -52,10 +60,10 @@ class Food_Plan{
 
 
 
-User --* Training
+Gym --* Training
 Training *-- Exercises
-Gym *-- User
-Food_Plan --* User
+Training *-- User
+FoodPlan *-- User
 
 
 

@@ -1,6 +1,5 @@
 from django.db import models
 from student.models import Student
-from training import Training
 from instructor.models import Instructor
 from django.contrib.auth.models import User
 
@@ -10,7 +9,6 @@ from django.contrib.auth.models import User
 class Training(models.Model):
     student = models.ForeignKey(Student, on_delete=models.CASCADE)
     instructor = models.ForeignKey(Instructor, on_delete=models.CASCADE)
-    training = models.ForeignKey(Training, on_delete=models.CASCADE)
     user = models.ForeignKey(User, on_delete=models.CASCADE) 
    
     class Meta:
