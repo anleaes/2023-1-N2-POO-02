@@ -1,61 +1,55 @@
 
+
 @startuml
 
 title: Diagrama Academia
 
-class User {
-    - nome: String
-    - endereco: String
-    - telefone: String
-    - email: String
-    - senha: String
-    - tipoUsuario: tipo
-    + construtor(nome, edereco, telefone, email, senha)      
-    + cadastrarUsuario(nome, edereco, telefone, email, senha)
-    + buscarUsuario(nome)                 
+class Student {
+    - name: String
+    - address: String
+    - fone: String
+    + construtor(nome, edereco, telefone)      
+            
     
 }
 
 class Gym{
-    - cnpj: String
-    - user: User
-    + construtor(cnpj)
-    + cadastrarcnpj(cnpj)
-    + adicionarAluno(student: Student)
-    + adicionarInstrutor(instructor: Instructor)
-
+    - name : String
+    - address : String
+    - cnpj: Int
+    + construtor(nome, endreco, cnpj)
 }
 
 
 class Training{
+    - date: date
+    - obs: String
     - exercises: Exercises
-    + construtor(tipoExercicio, peso, repeticoes)
-    + cadastrarTreino(tipoExercicio, peso, repeticoes)
+    - gym : Gym
+    - student : Student
+    + construtor(data, observacoes)
 }
 
 class Exercises{
-    - tipoExercicio: String
-    - peso: int
-    - repeticoes: int
-    + construtor(tipoExercicio, peso, repeticoes)
-    + cadastrarTreino(tipoExercicio, peso, repeticoes)
+    - type: String
+    - weigth: int
+    - hits: int
+    + construtor(tipo, peso, repeticoes)
+    
 }
 
-class Food_Plan{
-    - alimento: String
-    - quantidade: int
+class Plan{
+    - food: String
+    - quantity: int
+    - student: Student
     + construtor(alimento, quantidade)
-    + cadastrarPlanoAlimentar(alimento, quantidade)
 }
 
-
-
-
-
-User --* Training
+  
+Gym --* Training
 Training *-- Exercises
-Gym *-- User
-Food_Plan --* User
+Training *-- Student
+Plan *-- Student
 
 
 
