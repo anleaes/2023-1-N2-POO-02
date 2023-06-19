@@ -4,7 +4,7 @@ from django.db import models
 
 class Exercises(models.Model):
     type = models.TextField('Tipo', max_length=50)
-    weigth = models.TextField('Descricao', max_length=100)
+    weigth = models.TextField('Peso', max_length=100)
     hits = models.TextField('Repeticoes', max_length=100)
 
     
@@ -14,4 +14,5 @@ class Exercises(models.Model):
         ordering =['id']
 
     def __str__(self):
-        return self.type
+        #return self.type
+        return f'Tipo: {self.type}, Peso: {self.weigth}, Reteticoes: {self.hits}'

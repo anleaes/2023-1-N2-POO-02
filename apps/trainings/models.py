@@ -6,11 +6,14 @@ from gyms.models import Gyms
 # Create your models here.
 
 class Trainings(models.Model):
-    date = models.CharField('Data', max_length=50)
-    obs = models.TextField('Obs', max_length=100)
-    exercises = models.ForeignKey(Exercises, on_delete=models.CASCADE)
+   
     gyms = models.ForeignKey(Gyms, on_delete=models.CASCADE)
     students = models.ForeignKey(Students, on_delete=models.CASCADE)
+    exercises = models.ForeignKey(Exercises, on_delete=models.CASCADE)
+    obs = models.TextField('Obs', max_length=100)
+    date = models.CharField('Data', max_length=50)
+    
+    
 
     class Meta:
         verbose_name = 'Treino'
